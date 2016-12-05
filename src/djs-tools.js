@@ -29,6 +29,14 @@ djs.tools = {
 	 */
 	_initialized: false,
 	/**
+	 * Add the scrollbar width to the window width ?
+	 * Should be true
+	 *
+	 * @private
+	 * @var {Boolean}
+	 */
+	_dealWithScrollbar: true,
+	/**
 	 * jQuery body element
 	 *
 	 * @private
@@ -67,26 +75,25 @@ djs.tools = {
 		this._$htmlBody = $('html, body');
 		this._$window = $(window);
 
+		//Precomputed values
+		this._scrollBarWidth = this._computeScrollbarWidth();
+
 		// Set flag
 		this._initialized = true;
 	},
-
 	/**
-	 * Get the scroll bar width
+	 * Compute the scrollbar width
 	 *
 	 * @private
 	 * @return {Number}
 	 */
-	getScrollBarWidth: function () {
+	_computeScrollbarWidth: function () {
 
-		//Auto init
-		this._init();
-
-		// Force scroll bar on body and get width
+		// Force scrollbar on body and get width
 		this._$htmlBody.css('overflow', 'scroll');
 		var w1 = this._$body.outerWidth();
 
-		// Force hidden scroll bar on body and get width
+		// Force hidden scrollbar on body and get width
 		this._$htmlBody.css('overflow', 'hidden');
 		var w2 = this._$body.outerWidth();
 
@@ -97,14 +104,13 @@ djs.tools = {
 		return (w2 - w1);
 	},
 	/**
-	 * Detect if the body has a scr0ll bar
+	 * Detect if the body has a scrollbar
 	 *
-	 * @private
 	 * @return {Boolean}
 	 */
 	bodyHasScrollbar: function () {
 
-		//Auto init
+		// Auto init
 		this._init();
 
 		// Compare body and window width
@@ -113,21 +119,33 @@ djs.tools = {
 	/**
 	 * Returns the window width
 	 *
-	 * @private
 	 * @param {Boolean}		asMediaQuery (default : true)
-	 * @return {Boolean}
+	 * @return {Number}
 	 */
 	getWindowWidth: function (asMediaQuery) {
 
-		//Auto init
+		// Auto init
 		this._init();
 
 		// Default value for asMediaQuery
 		if (asMediaQuery == null) asMediaQuery = true;
 
-		// Returns the window width with or without the scroll bar
+		// Returns the window width with or without the scrollbar
 		return (asMediaQuery && this._dealWithScrollbar && this.bodyHasScrollbar()) ?
 		this._$window.width() + this._scrollBarWidth :
 			this._$window.width();
+	},
+	/**
+	 * Get the scrollbar width
+	 *
+	 * @return {Number}
+	 */
+	getScrollbarWidth: function () {
+
+		// Auto init
+		this._init();
+
+		// Return the pre-computed value
+		return this._scrollBarWidth;
 	}
 };
