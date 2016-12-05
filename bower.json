@@ -1,0 +1,31 @@
+{
+  "name": "djs-tools",
+  "description": "A set of Javascript functions used by the other Djs modules",
+  "main": [
+    "dist/djs-tools.js",
+    "dist/djs-tools.min.js"
+  ],
+  "authors": [
+    "Edouard Demotes-Mainard"
+  ],
+  "license": "https://opensource.org/licenses/BSD-2-Clause",
+  "keywords": [
+    "djs",
+    "tools",
+    "functions"
+  ],
+  "homepage": "https://github.com/EdouardDem/djs-tools",
+  "moduleType": [
+    "globals"
+  ],
+  "dependencies": {
+    "jquery": "^2.0.0",
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
