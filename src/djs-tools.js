@@ -113,8 +113,11 @@ djs.tools = {
 		// Auto init
 		this._init();
 
+		// Get window height
+		var wh = window.innerHeight || this._$window.height();
+
 		// Compare body and window width
-		return this._$body.height() > this._$window.height();
+		return this._$body.height() > wh;
 	},
 	/**
 	 * Returns the window width
