@@ -1,0 +1,31 @@
+{
+  "name": "djs-ui-tools",
+  "description": "A set of Javascript UI functions used by the other Djs modules",
+  "main": [
+    "dist/djs-ui-tools.js",
+    "dist/djs-ui-tools.min.js"
+  ],
+  "authors": [
+    "Edouard Demotes-Mainard"
+  ],
+  "license": "https://opensource.org/licenses/BSD-2-Clause",
+  "keywords": [
+    "djs",
+    "tools",
+    "functions"
+  ],
+  "homepage": "https://github.com/EdouardDem/djs-ui-tools",
+  "moduleType": [
+    "globals"
+  ],
+  "dependencies": {
+    "jquery": "^2.0.0"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
