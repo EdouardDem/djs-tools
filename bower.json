@@ -1,6 +1,6 @@
 {
   "name": "djs-ui-tools",
-  "description": "A set of Javascript functions used by the other Djs modules",
+  "description": "A set of Javascript UI functions used by the other Djs modules",
   "main": [
     "dist/djs-ui-tools.js",
     "dist/djs-ui-tools.min.js"

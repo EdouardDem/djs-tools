@@ -12,7 +12,7 @@ window.djs = window.djs || {};
  */
 window.djs.tools = window.djs.tools || {};
 /**
- * A set of Javascript functions used by the other Djs modules.
+ * A set of Javascript UI functions used by the other Djs modules.
  *
  * @see https://github.com/EdouardDem/djs-ui-tools
  */
