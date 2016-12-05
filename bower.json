@@ -1,9 +1,9 @@
 {
-  "name": "djs-tools",
-  "description": "A set of Javascript functions used by the other Djs modules",
+  "name": "djs-ui-tools",
+  "description": "A set of Javascript UI functions used by the other Djs modules",
   "main": [
-    "dist/djs-tools.js",
-    "dist/djs-tools.min.js"
+    "dist/djs-ui-tools.js",
+    "dist/djs-ui-tools.min.js"
   ],
   "authors": [
     "Edouard Demotes-Mainard"
@@ -14,7 +14,7 @@
     "tools",
     "functions"
   ],
-  "homepage": "https://github.com/EdouardDem/djs-tools",
+  "homepage": "https://github.com/EdouardDem/djs-ui-tools",
   "moduleType": [
     "globals"
   ],

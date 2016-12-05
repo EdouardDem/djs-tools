@@ -8,11 +8,15 @@
  */
 window.djs = window.djs || {};
 /**
- * A set of Javascript functions used by the other Djs modules.
- *
- * @see https://github.com/EdouardDem/djs-tools
+ * Object djs.tools for namespace
  */
-djs.tools = {
+window.djs.tools = window.djs.tools || {};
+/**
+ * A set of Javascript UI functions used by the other Djs modules.
+ *
+ * @see https://github.com/EdouardDem/djs-ui-tools
+ */
+djs.tools.ui = {
 
 	/**
 	 * Debug flag, for console logging

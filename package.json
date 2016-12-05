@@ -1,7 +1,7 @@
 {
-  "name": "djs-tools",
+  "name": "djs-ui-tools",
   "version": "0.1.0",
-  "description": "A set of Javascript functions used by the other Djs modules",
+  "description": "A set of Javascript UI functions used by the other Djs modules",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://EdouardDem@github.com/EdouardDem/djs-tools.git"
+    "url": "git+https://EdouardDem@github.com/EdouardDem/djs-ui-tools.git"
   },
   "author": "Edouard Demotes-Mainard",
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/EdouardDem/djs-tools/issues"
+    "url": "https://github.com/EdouardDem/djs-ui-tools/issues"
   },
-  "homepage": "https://github.com/EdouardDem/djs-tools#readme",
+  "homepage": "https://github.com/EdouardDem/djs-ui-tools#readme",
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-copy": "^0.8.2",

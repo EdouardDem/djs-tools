@@ -21,10 +21,10 @@ runTests = function () {
 
     //----------------------------------------------
     // Init resize object
-	$('.results').append('<div>Windows width as media query (including the scrollbar): ' + djs.tools.getWindowWidth() + 'px</div>');
-	$('.results').append('<div>Windows width only: ' + djs.tools.getWindowWidth(false) + 'px</div>');
-	$('.results').append('<div>Scrollbar width: ' + djs.tools.getScrollbarWidth() + 'px</div>');
-	$('.results').append('<div>Body has scroll bar: ' + (djs.tools.bodyHasScrollbar() ? 'Yes': 'No') + '</div>');
+	$('.results').append('<div>Windows width as media query (including the scrollbar): ' + djs.tools.ui.getWindowWidth() + 'px</div>');
+	$('.results').append('<div>Windows width only: ' + djs.tools.ui.getWindowWidth(false) + 'px</div>');
+	$('.results').append('<div>Scrollbar width: ' + djs.tools.ui.getScrollbarWidth() + 'px</div>');
+	$('.results').append('<div>Body has scroll bar: ' + (djs.tools.ui.bodyHasScrollbar() ? 'Yes': 'No') + '</div>');
 
     //----------------------------------------------
     // Ends displayed tests
