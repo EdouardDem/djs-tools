@@ -1,6 +1,12 @@
 # djs-ui-tools
 A set of Javascript UI functions used by the other Djs modules
 
+## Installation
+
+```
+bower install djs-ui-tools
+```
+
 ## Available functions
 
 ### bodyHasScrollbar
