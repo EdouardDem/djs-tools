@@ -7,6 +7,12 @@ A set of Javascript UI functions used by the other Djs modules
 bower install djs-ui-tools
 ```
 
+## Dependencies
+
+This package requires [jQuery](http://jquery.com/)
+
+If you install it with Bower, the dependencies will be included.
+
 ## Available functions
 
 ### bodyHasScrollbar
