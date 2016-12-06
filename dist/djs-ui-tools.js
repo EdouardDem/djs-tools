@@ -19,6 +19,17 @@ window.djs.tools = window.djs.tools || {};
 djs.tools.ui = {
 
 	/**
+	 * Directions
+	 *
+	 * @var {Object}
+	 */
+	directions: {
+		none: 0,
+		horizontal: 1,
+		vertical: 2,
+		both: 3
+	},
+	/**
 	 * Debug flag, for console logging
 	 *
 	 * @private
@@ -154,5 +165,33 @@ djs.tools.ui = {
 
 		// Return the pre-computed value
 		return this._scrollBarWidth;
+	},
+	/**
+	 * Find the direction of the scroll of and element
+	 *
+	 * @param {Object} $element
+	 * @return {Number}
+	 * 	none: 0,
+	 * 	horizontal: 1,
+	 * 	vertical: 2,
+	 * 	both: 3
+	 * This values are stored in djs.tools.ui.directions
+	 */
+	getScrollDirection: function ($element) {
+
+		// Check if element exists
+		if ($element.length == 0) return this.directions.none;
+
+		// Values
+		var w = $element.outerWidth(),
+			h = $element.outerHeight(),
+			sh = $element.get(0).scrollHeight,
+			sw = $element.get(0).scrollWidth;
+
+		// Returns directions
+		if (sh > h && sw > w) return this.directions.both;
+		if (sh > h) return this.directions.vertical;
+		if (sw > w) return this.directions.horizontal;
+		return this.directions.none;
 	}
 };
