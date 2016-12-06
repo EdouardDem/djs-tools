@@ -20,11 +20,24 @@ clearLog = function () {
 runTests = function () {
 
     //----------------------------------------------
-    // Init resize object
-	$('.results').append('<div>Windows width as media query (including the scrollbar): ' + djs.tools.ui.getWindowWidth() + 'px</div>');
-	$('.results').append('<div>Windows width only: ' + djs.tools.ui.getWindowWidth(false) + 'px</div>');
-	$('.results').append('<div>Scrollbar width: ' + djs.tools.ui.getScrollbarWidth() + 'px</div>');
-	$('.results').append('<div>Body has scroll bar: ' + (djs.tools.ui.bodyHasScrollbar() ? 'Yes': 'No') + '</div>');
+    // Dimensions test
+	$('.results')
+		.append('<div>Windows width as media query (including the scrollbar): ' + djs.tools.ui.getWindowWidth() + 'px</div>')
+		.append('<div>Windows width only: ' + djs.tools.ui.getWindowWidth(false) + 'px</div>')
+		.append('<div>Scrollbar width: ' + djs.tools.ui.getScrollbarWidth() + 'px</div>')
+		.append('<div>Body has scroll bar: ' + (djs.tools.ui.bodyHasScrollbar() ? 'Yes': 'No') + '</div>');
+
+	//----------------------------------------------
+	// Directions test
+	$('.scroll-cnt').each(function(i,e) {
+		var direction = djs.tools.ui.getScrollDirection($(e));
+		var text = "Unknown";
+		if (direction === djs.tools.ui.directions.none) text = "none";
+		else if (direction === djs.tools.ui.directions.horizontal) text = "horizontal";
+		else if (direction === djs.tools.ui.directions.vertical) text = "vertical";
+		else if (direction === djs.tools.ui.directions.both) text = "both";
+		$(e).find('.inr').text(text);
+	});
 
     //----------------------------------------------
     // Ends displayed tests

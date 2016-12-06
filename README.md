@@ -28,3 +28,21 @@ Get the scrollbar width, computed once.
 djs.tools.ui.getScrollbarWidth();
 ```
 
+### getScrollDirection
+
+Find the direction of the scroll of and element.
+
+```javascript
+djs.tools.ui.getScrollDirection($(element));
+```
+
+It returns one of these values :
+
+```javascript
+djs.tools.ui.directions = {
+    none: 0,
+    horizontal: 1,
+    vertical: 2,
+    both: 3
+}
+```
